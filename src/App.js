@@ -1,19 +1,24 @@
 import logo from "./logo.svg";
-import "./App.css";
-import "./Weather";
-import "./Search";
-import "./Main";
-import "./Weather.css";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import Weather from "./Weather";
 
-function App() {
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello</p>
-      </header>
+      <div className="container">
+        {" "}
+        <Weather defaultCity="Hamburg" />
+      </div>
+      <footer className="coded">
+        {" "}
+        <a href="https://github.com/Agathe2109/weather-react" target="_blank">
+          Open Source code
+        </a>{" "}
+        by Agathe Pinsard
+      </footer>
     </div>
   );
 }
-
-export default App;

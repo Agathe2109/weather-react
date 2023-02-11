@@ -26,7 +26,6 @@ export default function Weather() {
               </h2>
               <div className="weather-forecast" id="weather-forecast"></div>
             </div>
-            <div class="coded">Coded by Agathe Pinsard</div>
           </div>
         </div>
       </div>
