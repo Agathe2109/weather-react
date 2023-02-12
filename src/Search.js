@@ -35,7 +35,7 @@ export default function Search() {
     <form onSubmit={handleSubmit} autoComplete="off">
       <input
         type="search"
-        placeholder="Enter a city"
+        placeholder="Search for a city"
         onChange={updateCity}
         className="search"
       />
