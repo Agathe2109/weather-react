@@ -7,13 +7,13 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-export default function Search() {
+export default function Search(props) {
   const [city, setCity] = useState("");
   const [weather, setWeather] = useState(null);
 
   function handleSubmit(event) {
     event.preventDefault();
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=a5acb752426cd8188485c35694980e3a&units=metric`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=a5acb752426cd8188485c35694980e3a&units=metric`;
     axios.get(apiUrl).then(showWeather);
   }
 
@@ -28,6 +28,7 @@ export default function Search() {
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      city: response.data.name,
     });
   }
 
@@ -46,6 +47,7 @@ export default function Search() {
   if (weather) {
     return (
       <div>
+        <div className="title">{weather.city}</div>
         {form}
         <br />
         <br />

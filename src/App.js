@@ -9,7 +9,22 @@ export default function App() {
         <Weather defaultCity="Hamburg" />
       </div>
       <footer className="coded">
-        {" "}
+        <a
+          href="https://github.com/Agathe2109/weather-react"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Github
+        </a>
+        <br />
+        <a
+          href="https://github.com/Agathe2109/weather-react"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Github
+        </a>
+        <br />{" "}
         <a
           href="https://github.com/Agathe2109/weather-react"
           target="_blank"
