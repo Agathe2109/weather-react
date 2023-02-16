@@ -34,14 +34,15 @@ form {
   border-radius: 20px 0px 0px 20px;
   padding: 4px 13px;
   border-width: thin;
-  position: 20px;
+  position: relative;
+  right: 30px;
 }
 
 .submit {
   border-radius: 0px 20px 20px 0px;
   padding: 4px 13px;
   position: relative;
-  left: -2px;
+  left: -34px;
   border-width: thin;
 }
 
@@ -71,7 +72,20 @@ h2 {
   font-size: 16px;
 }
 .nine {
-  font-size: 25px;
+  font-size: 40px;
+  position: relative;
+  top: 5px;
+}
+.unit {
+  margin-left: 9px;
+  position: relative;
+  margin-right: 10px;
+  top: -12px;
+  font-size: 15px;
+}
+.icon {
+  position: relative;
+  bottom: 18px;
 }
 .tempp {
   font-size: 18px;
