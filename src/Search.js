@@ -6,14 +6,16 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import FormattedDate from "./FormatedDate";
+import WeatherTemperature from "./WeatherTemperature";
 
-export default function Search(props) {
+export default function Search() {
   const [city, setCity] = useState("");
   const [weather, setWeather] = useState(null);
 
   function handleSubmit(event) {
     event.preventDefault();
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=a5acb752426cd8188485c35694980e3a&units=metric`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=a5acb752426cd8188485c35694980e3a&units=metric`;
     axios.get(apiUrl).then(showWeather);
   }
 
@@ -29,6 +31,7 @@ export default function Search(props) {
       humidity: response.data.main.humidity,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       city: response.data.name,
+      date: new Date(response.data.dt * 1000),
     });
   }
 
@@ -36,7 +39,7 @@ export default function Search(props) {
     <form onSubmit={handleSubmit} autoComplete="off">
       <input
         type="search"
-        placeholder="Search for a city"
+        placeholder="Search for a city.. "
         onChange={updateCity}
         className="search"
       />
@@ -54,12 +57,14 @@ export default function Search(props) {
         <br />
         <Container>
           <Row>
-            <Col md={3}>Saturday, February 11 at 09:56</Col>
             <Col md={3}>
-              <img src={weather.icon} alt="icon" />
+              <FormattedDate date={weather.date} />
             </Col>
-            <Col md={3} className="nine">
-              {Math.round(weather.temperature)}°C
+            <Col md={3}>
+              <img src={weather.icon} alt="icon" className="icon" />
+            </Col>
+            <Col md={3}>
+              <WeatherTemperature celsius={weather.temperature} />
             </Col>
             <Col md={3} className="clear">
               {weather.description}
