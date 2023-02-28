@@ -1,5 +1,5 @@
 body {
-  background: #f9fcfd;
+  background: white;
   color: #495057;
 }
 .weather-app {
@@ -7,7 +7,7 @@ body {
   border: 1px solid #cfd8e2;
   margin: 0 auto;
   padding: 30px;
-  background-color: #e2e9f3;
+  background-color: #f9fcfd;
   border-radius: 10px;
   box-shadow: 0.3px 0.3px 0.3px #c5cdd6;
   margin-top: 25px;
@@ -35,14 +35,14 @@ form {
   padding: 4px 13px;
   border-width: thin;
   position: relative;
-  right: 30px;
+  right: -10px;
 }
 
 .submit {
   border-radius: 0px 20px 20px 0px;
   padding: 4px 13px;
   position: relative;
-  left: -34px;
+  left: 10px;
   border-width: thin;
 }
 
@@ -118,7 +118,7 @@ h2 {
   text-align: center;
   font-size: 14px;
   line-height: 28px;
-  position: fixed;
+  position: relative;
   bottom: 0;
   left: -25px;
   width: 100%;

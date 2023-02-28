@@ -15,16 +15,6 @@ export default function Weather() {
               </div>
               <Search />
               <br />
-              <h2>
-                <div className="row update">
-                  <div
-                    className="col-"
-                    class="current-time"
-                    id="current-time"
-                  ></div>
-                </div>
-              </h2>
-              <div className="weather-forecast" id="weather-forecast"></div>
             </div>
           </div>
         </div>

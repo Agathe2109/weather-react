@@ -1,9 +1,6 @@
 import React from "react";
-import "./Weather.css";
-import "bootstrap/dist/css/bootstrap.css";
-import "bootstrap/dist/js/bootstrap.bundle.min";
 
-export default function FormatedDate(props) {
+export default function FormattedDate(props) {
   let days = [
     "Sunday",
     "Monday",
@@ -29,18 +26,19 @@ export default function FormatedDate(props) {
   ];
   let day = days[props.date.getDay()];
   let month = months[props.date.getMonth()];
-  let hour = props.date.getHours();
-  if (hour < 10) {
-    hour = `0${hour}`;
+  let hours = props.date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
   }
-  let minute = props.date.getMinutes();
-  if (minute < 10) {
-    minute = `0${minute}`;
+
+  let minutes = props.date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
   }
   let date = props.date.getDate();
   return (
     <div>
-      {day}, {month} {date}, at {hour}:{minute}
+      {day}, {month} {date}, at {hours}:{minutes}
     </div>
   );
 }

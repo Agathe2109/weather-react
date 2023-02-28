@@ -14,22 +14,6 @@ export default function App() {
           target="_blank"
           rel="noreferrer"
         >
-          Github
-        </a>
-        <br />
-        <a
-          href="https://github.com/Agathe2109/weather-react"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Github
-        </a>
-        <br />{" "}
-        <a
-          href="https://github.com/Agathe2109/weather-react"
-          target="_blank"
-          rel="noreferrer"
-        >
           Open Source code
         </a>{" "}
         by Agathe Pinsard
